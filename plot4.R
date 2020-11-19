@@ -7,8 +7,8 @@ power<-read.table(
         na.strings = "?"
 )
 power$Date<-as.Date(power$Date, format = "%d/%m/%Y")
-power<-power[power$Date == as.Date("1/7/2007","%d/%m/%Y") |
-                     power$Date == as.Date("2/7/2007","%d/%m/%Y") ,]
+power<-power[power$Date == as.Date("1/2/2007","%d/%m/%Y") |
+                     power$Date == as.Date("2/2/2007","%d/%m/%Y") ,]
 power$DateTime<- as.POSIXct(paste(power$Date,power$Time))
 power <- power[complete.cases(power),]
 
